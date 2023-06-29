@@ -1,0 +1,6 @@
+puts sprintf '%#b', (0b1010 & 0b1100)
+puts sprintf '%#b', (0b1010 & 0b1100)
+puts sprintf '%#b', (0b1010 ^ 0b1100)
+puts sprintf '%#b', (0b1010 >> 1)
+puts sprintf '%#b', (0b1010 << 1)
+puts sprintf '%#b', (~0b1010)
