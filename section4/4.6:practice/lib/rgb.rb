@@ -66,6 +66,9 @@ end
 # end
 
 # リファクタリング④
-def to_ints(hex)
-  hex.scan(/\w\w/).map(&:hex)
-end
+# def to_ints(hex)
+#   hex.scan(/\w\w/).map(&:hex)
+# end
+
+# リファクタリング⑤
+def to_ints(hex) = hex.scan(/\w\w/).map(&:hex)
