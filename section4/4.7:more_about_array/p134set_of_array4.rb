@@ -1,5 +1,6 @@
 # 本格的な集合演算をする場合は配列よりもSetクラスを使うべき
-require 'set'
+# Ruby3.2ではSetクラスを使うのにrequireは不要
+# require 'set'
 
 a = Set[1, 2, 3]
 b = Set[3, 4, 5]
