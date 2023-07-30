@@ -13,3 +13,11 @@ dimensions.each do |length, width|
 end
 
 p areas #=> [200, 1200, 3000]
+
+# lengthとwidthには値が渡されるが、fooとbarはnilになる
+dimensions.each do |length, width, foo, bar|
+  p [length, width, foo, bar]
+end
+#=> [10, 20, nil, nil]
+#   [30, 40, nil, nil]
+#   [50, 60, nil, nil]
