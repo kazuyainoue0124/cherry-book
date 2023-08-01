@@ -9,3 +9,14 @@ end
 puts factorial(5) #=> 120
 # 0!は1
 puts factorial(0) #=> 1
+
+# 再帰呼び出しを使うケースは限られる
+# 上記のfactorialメソッドは再帰呼び出しを使わなくても書ける
+def factorial(n)
+  # 再帰呼び出しを使わずに階乗を計算する例
+  ret = 1
+  (1..n).each { |n| ret *= n }
+  ret
+end
+puts factorial(5) #=> 120
+puts factorial(0) #=> 1
