@@ -10,3 +10,10 @@ puts sum #=> 10
 sum = 0
 for n in numbers do sum += n end
 puts sum #=> 10
+
+# Rubyのプログラムではfor文よりもeachメソッドを使う
+sum = 0
+numbers.each do |n|
+  sum += n
+end
+puts sum #=> 10
