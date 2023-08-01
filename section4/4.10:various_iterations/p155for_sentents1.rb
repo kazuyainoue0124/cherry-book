@@ -5,3 +5,8 @@ for n in numbers
   sum += n
 end
 puts sum #=> 10
+
+# doを入れて1行で書くことも可能
+sum = 0
+for n in numbers do sum += n end
+puts sum #=> 10
