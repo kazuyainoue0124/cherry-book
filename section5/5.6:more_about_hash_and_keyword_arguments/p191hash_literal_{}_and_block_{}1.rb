@@ -6,4 +6,7 @@ end
 # 第1引数にハッシュの{}が来る場合は()を省略できない
 buy_burger({'drink' => true, 'potato' => false}, 'fish')
 # ()を省略するとエラーになる
-buy_burger{'drink' => true, 'potato' => false}, 'fish'
+buy_burger {'drink' => true, 'potato' => false}, 'fish'
+#=> syntax error, unexpected `false', expecting local variable or method (SyntaxError)
+# ...ink' => true, 'potato' => false}, 'fish'
+# ...                          ^~~~~
