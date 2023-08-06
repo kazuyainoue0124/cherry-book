@@ -19,3 +19,8 @@ foo(10, 20 c: 30) #=> wrong number of arguments (given 3, expected 2) (ArgumentE
 def foo(*args, **opts)
   bar(*args, **opts)
 end
+
+# ...引数を使うと通常の引数とキーワード引数をまとめて委譲できるため↑よりシンプル（Ruby2.7以降）
+def foo(...)
+  bar(...)
+end
