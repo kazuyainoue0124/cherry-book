@@ -16,11 +16,18 @@ end
 # end
 
 # Rubyでは変数への代入自体が戻り値を持つため、↑のメソッドは以下のように書ける
+# def show_currency(country)
+#   # 条件分岐内で直接変数に代入してしまう（値が取得できれば真、できなければ偽）
+#   if currency = find_currency(country)
+#     currency.upcase
+#   end
+# end
+
+# ↑のメソッドは&.演算子を使うとさらに以下のように書ける
 def show_currency(country)
-  # 条件分岐内で直接変数に代入してしまう（値が取得できれば真、できなければ偽）
-  if currency = find_currency(country)
-    currency.upcase
-  end
+  currency = find_currency(country)
+  # currencyがnilの場合を考慮して、&.演算子でメソッドを呼び出す
+  currency&.upcase
 end
 
 # 通貨が見つかる場合と見つからない場合の結果を確認
