@@ -14,3 +14,13 @@ regexp = /
   \d{4}
 /x
 puts '123 4567' =~ regexp #=> 0
+
+# Regexp.newを使う場合は、Regexp::EXTENDEDという定義を渡す
+# バックスラッシュを特別扱いしないように'TEXT'を使う
+pattern = <<'TEXT'
+  \d{3} # 郵便番号の先頭3桁
+  -     # 区切り文字のハイフン
+  \d{4} # 郵便番号の末尾4桁
+TEXT
+regexp = Regexp.new(pattern, Regexp::EXTENDED)
+puts '123-4567' =~ regexp #=> 0
