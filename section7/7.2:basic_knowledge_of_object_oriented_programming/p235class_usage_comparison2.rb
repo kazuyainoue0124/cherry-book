@@ -30,3 +30,9 @@ users.each do |user|
 end
 #=> 氏名:  Ruby、年齢: 20
 #   氏名:  Python、年齢: 30
+
+# クラスを使うタイプミスをした場合にエラーが発生する
+puts users[0].first_mame #=> "Alice"
+# タイプミスするとエラーが発生するので不具合に気づきやすい
+puts users[0].first_name
+#=> undefined method `first_name' for #<User:0x000000010295f6c0 @first_name="Alice", @last_name="Ruby", @age=20> (NoMethodError)
