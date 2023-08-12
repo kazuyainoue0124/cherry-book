@@ -36,3 +36,11 @@ puts users[0].first_mame #=> "Alice"
 # タイプミスするとエラーが発生するので不具合に気づきやすい
 puts users[0].first_name
 #=> undefined method `first_name' for #<User:0x000000010295f6c0 @first_name="Alice", @last_name="Ruby", @age=20> (NoMethodError)
+
+# 勝手に属性を追加できない
+users[0].country = 'japan'
+#=> undefined method `country=' for #<User:0x00000001050ded68 @first_name="Alice", @last_name="Ruby", @age=20> (NoMethodError)
+
+# 勝手にfirst_nameを変更できない
+users[0].first_mame = 'Carol'
+#=> undefined method `first_mame=' for #<User:0x00000001006ef1a8 @first_name="Alice", @last_name="Ruby", @age=20> (NoMethodError)
