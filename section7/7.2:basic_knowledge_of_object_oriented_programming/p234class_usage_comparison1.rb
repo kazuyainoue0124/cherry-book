@@ -21,3 +21,11 @@ end
 puts users[0][:first_name] #=> "Alice"
 # ハッシュだとタイプミスしてもnilが返るだけなので不具合に気づきにくい
 puts users[0][:first_mame] #=> nil
+
+# ハッシュは新しくキーを追加したり内容を変更できたりするので「もろくて壊れやすいプログラム」になりがち
+# 勝手に新しいキーを追加
+users[0][:country] = 'japan'
+# 勝手にfirst_nameを変更
+users[0][:first_name] = 'Carol'
+# ハッシュの中身が変更される
+puts users[0] #=> "{:first_name=>"Carol", :last_name=>"Ruby", :age=>20, :country=>"japan"}"
