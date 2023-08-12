@@ -16,3 +16,8 @@ users.each do |user|
 end
 #=> 氏名: Alice Ruby、年齢: 20
 #   氏名: Bob Python、年齢: 30
+
+# ハッシュを使うとキーをタイプミスしたり間違ったキーを指定した場合にnilが返ってくる
+puts users[0][:first_name] #=> "Alice"
+# ハッシュだとタイプミスしてもnilが返るだけなので不具合に気づきにくい
+puts users[0][:first_mame] #=> nil
