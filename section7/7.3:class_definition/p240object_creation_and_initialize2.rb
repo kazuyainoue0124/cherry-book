@@ -6,3 +6,8 @@ class User
   end
 end
 User.new #=> Initialized.
+
+# initializeメソッドはデフォルトでprivateメソッドになっているため外部から呼び出せない
+user = User.new
+user.initialize
+#=> private method `initialize' called for #<User:0x0000000104a605e0> (NoMethodError)
