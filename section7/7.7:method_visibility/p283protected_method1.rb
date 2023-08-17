@@ -19,3 +19,4 @@ alice = User.new('Alice', 50)
 bob = User.new('Bob', 60)
 # AliceはBobのweightを取得できない
 puts alice.heavier_than?(bob)
+#=> undefined method `weight' for #<User:0x0000000100c50250 @name="Bob", @weight=60> (NoMethodError)
