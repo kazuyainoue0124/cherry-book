@@ -33,3 +33,6 @@ puts a == 'a' #=> false
 # == はメソッドなので普通のメソッドのようにドット(.)付きでも呼び出せる
 puts a.==(b)  #=> false
 puts a.==(c)  #=> true
+
+# 左辺にあるのが整数なので、ProductクラスではなくIntegerクラスの==が呼び出される
+puts 1 == a   #=> false
