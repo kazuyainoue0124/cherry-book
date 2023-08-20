@@ -29,3 +29,7 @@ puts a == c   #=> true
 # Product以外の比較はfalse
 puts a == 1   #=> false
 puts a == 'a' #=> false
+
+# == はメソッドなので普通のメソッドのようにドット(.)付きでも呼び出せる
+puts a.==(b)  #=> false
+puts a.==(c)  #=> true
