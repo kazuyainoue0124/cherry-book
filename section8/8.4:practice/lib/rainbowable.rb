@@ -30,12 +30,22 @@ module Rainbowable
   # ②to_sの結果を変数strに代入せず、直接each_charメソッドを呼ぶ
   # ③ループカウンタcountの値を自分で加算していくのではなく、with_indexを利用して取得する
   # ④joinした結果を変数retに入れず、joinの戻り値に対して直接"\e[0m"を連結する
+  # def rainbow
+  #   colored_chars = []
+  #   to_s.each_char.with_index do |char, count|
+  #     color = 31 + count % 6
+  #     colored_chars << "\e[#{color}m#{char}"
+  #   end
+  #   colored_chars.join + "\e[0m"
+  # end
+
+  # 以下の点をさらにリファクタリング
+  # ①mapメソッドの活用
+  # ②mapメソッドの戻り値に対して直接joinメソッドを呼び出す
   def rainbow
-    colored_chars = []
-    to_s.each_char.with_index do |char, count|
+    to_s.each_char.map.with_index do |char, count|
       color = 31 + count % 6
-      colored_chars << "\e[#{color}m#{char}"
-    end
-    colored_chars.join + "\e[0m"
+      "\e[#{color}m#{char}"
+    end.join + "\e[0m"
   end
 end
