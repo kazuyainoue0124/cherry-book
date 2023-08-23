@@ -4,9 +4,10 @@ require_relative '../lib/rainbowable'
 class RainbowableTest < Minitest::Test
   def setup
     # 文字列や配列でrainbowメソッドが呼び出せるよう、Rainbowableモジュールをinclude
-    String.include.Rainbowable
-    Array.include.Rainbowable
+    String.include Rainbowable
+    Array.include Rainbowable
   end
+
   def test_rainbow
     # とりあえずモジュールが参照できることを確認する
     expected = "\e[31mH\e[32me\e[33ml\e[34ml\e[35mo\e[36m,\e[31m \e[32mw\e[33mo\e[34mr\e[35ml\e[36md\e[31m!\e[0m"
