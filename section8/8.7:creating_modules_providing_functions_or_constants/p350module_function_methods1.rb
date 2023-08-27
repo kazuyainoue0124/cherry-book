@@ -28,3 +28,10 @@ product = Product.new
 product.title
 #=> [LOG] title is called.
 #   "A great movie"
+
+# module_functionでモジュール関数となったメソッドは、他のクラスにミックスインすると
+# 自動的にprivateになる
+product = Product.new
+# logメソッドはprivateなので外部からは呼び出せない
+product.log 'Hello.'
+#=> private method `log' called for #<Product:0x0000000104e7f6a8> (NoMethodError)
