@@ -26,3 +26,19 @@ end
 # NameDecoratorをprependしたので、nameメソッドは装飾された文字列が返る
 product = Product.new
 puts product.name #=> "<<A great film>>"
+
+# Productクラスと同じようにnameメソッドを持つクラスがあったとする
+class User
+  def name
+    'Alice'
+  end
+end
+
+class User
+  # prependを使えばUserクラスのnameメソッドも置き換えることもできる
+  prepend NameDecorator
+end
+
+# Userクラスのnameメソッドを上書きすることができた！
+user = User.new
+puts user.name #=> "<<Alice>>"
