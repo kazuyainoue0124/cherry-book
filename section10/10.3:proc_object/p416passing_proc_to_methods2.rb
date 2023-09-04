@@ -12,3 +12,7 @@ greet(&repeat_proc)
 #=> おはよう
 #   こんにちはこんにちは
 #   こんばんは
+
+# &なしで呼び出すと普通の引数を1つ渡したことになる
+greet(repeat_proc)
+#=> wrong number of arguments (given 1, expected 0) (ArgumentError)
