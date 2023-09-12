@@ -6,3 +6,10 @@ in [1, *]
   'matched'
 end
 #=> "matched"
+
+# 上のコードは次のように*をなくしてカンマで終わらせてもOK
+case [1, 2, 3, 4, 5]
+in [1, ]
+  'matched'
+end
+#=> "matched"
