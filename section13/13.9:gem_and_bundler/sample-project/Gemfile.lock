@@ -2,8 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     concurrent-ruby (1.2.2)
-    faker (3.2.1)
-      i18n (>= 1.8.11, < 2)
+    faker (2.16.0)
+      i18n (>= 1.6, < 2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
 
@@ -11,7 +11,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
-  faker
+  faker (= 2.16.0)
 
 BUNDLED WITH
    2.4.10
