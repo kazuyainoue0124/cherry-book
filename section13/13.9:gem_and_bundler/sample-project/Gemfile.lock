@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    awesome_print (1.9.2)
     concurrent-ruby (1.2.2)
     faker (2.16.0)
       i18n (>= 1.6, < 2)
@@ -11,6 +12,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  awesome_print
   faker (= 2.16.0)
 
 BUNDLED WITH
