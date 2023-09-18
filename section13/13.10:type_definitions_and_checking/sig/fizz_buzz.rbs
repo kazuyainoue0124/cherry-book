@@ -6,6 +6,13 @@ class Object
   def fizz_buzz: (Integer n) -> String
 end
 
-class FizzBuzzTest
+module Minitest
+  class Test
+    def assert_equal: (untyped, untyped) -> void
+  end
+end
+
+class FizzBuzzTest <  Minitest::Test
   def test_fizz_buzz: -> untyped
+  def assert_equal: (untyped, untyped) -> void
 end
